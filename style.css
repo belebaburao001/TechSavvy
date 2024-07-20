@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.none{
+    display: none;
+}
+
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Background Video */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* NavBar */
+nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 80px;
+}
+
+.logo img {
+    height: 35px;
+    cursor: pointer;
+}
+
+.navlinks{
+    display: flex;
+    gap: 35px;
+}
+
+.navlinks a {
+    color: white;
+    font-size: 18px;
+}
+
+.navlinks a:hover{
+    color: #e7e7e7;
+}
+
+.nav-btn a {
+    color: white;
+    background: transparent;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 2px solid #0061C9;
+    font-size: 18px;
+}
+
+.nav-btn a:hover{
+    color: #fff;
+    background: #0061C9;
+    border: 2px solid #0061C9;
+}
+
+/* Hero Section */
+.hero{
+    width: 100%;
+    height: calc(100vh - 80px);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text h1{
+    font-size: 65px;
+    font-weight: bold;
+    color: #fff;
+    width: 881px;
+    margin-bottom: 10px;
+    letter-spacing: -4px;
+}
+
+.hero-text p{
+    color: #fff;
+    width: 463px;
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.hero-text .hero-btn{
+    color: white;
+    background: #0061C9;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+.hero-text .hero-btn:hover{
+    color: #fff;
+    background: transparent;
+    border: 2px solid #0061C9;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 1025px){
+    .hero-text h1{
+        font-size: 55px;
+        width: 757px;
+        letter-spacing: -3px;
+    }
+}
+
+@media screen and (max-width: 950px){
+    nav{
+        padding: 0 20px;
+    }
+    
+    .none{
+        display: block;
+    }
+
+    .navlinks{
+        position: absolute;
+        top: -2000%;
+        left: 0;
+        z-index: 999;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+    }
+
+    .navlinks a{
+        font-size: 22px;
+    }
+
+    .navlinks #closed{
+        color: #fff;
+        font-size: 45px;
+        position: absolute;
+        top: 6%;
+        right: 8%;
+        cursor: pointer;
+    }
+
+    .nav-btn{
+        display: none;
+    }
+
+    nav #menu{
+        font-size: 50px;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .hero{
+        padding: 0 20px;
+    }
+    
+    .hero-text h1{
+        font-size: 40px;
+        width: 586px;
+        letter-spacing: -1px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    nav .logo img{
+        height: 25px;
+    }
+    .hero-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .hero-text h1{
+        font-size: 32px;
+        width: 100%;
+        letter-spacing:normal;
+        text-align: center;
+    }
+
+    .hero-text p{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    nav #menu{
+        font-size: 40px;
+    }
+}
